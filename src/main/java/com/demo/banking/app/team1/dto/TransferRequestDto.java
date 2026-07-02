@@ -12,7 +12,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class TransferRequest {
+public class TransferRequestDto {
 
     @NotNull(message = "From account ID is required")
     private Long fromAccountId;

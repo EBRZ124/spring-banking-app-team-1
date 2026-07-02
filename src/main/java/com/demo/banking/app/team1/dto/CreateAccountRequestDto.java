@@ -11,7 +11,7 @@ import lombok.Setter;
 @Getter
 @Setter
 
-public class CreateAccountRequest
+public class CreateAccountRequestDto
 {
     @NotBlank(message = "IBAN cannot be empty.")
     private String iban;
