@@ -23,6 +23,10 @@ public class TransactionResponseDto {
     private String note;
 
     public static TransactionResponseDto from(Transaction transaction) {
+        if (transaction == null) {
+            throw new IllegalArgumentException("Transaction cannot be null");
+        }
+
         return new TransactionResponseDto(
                 transaction.getId(),
                 transaction.getAccount().getId(),
