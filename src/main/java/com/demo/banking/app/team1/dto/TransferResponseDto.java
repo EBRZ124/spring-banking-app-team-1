@@ -24,13 +24,13 @@ public class TransferResponseDto {
     private Long toAccountId;
 
     @Positive(message = "Transfer amount must be greater than 0")
-    private Double amount;
+    private double amount;
 
     @PositiveOrZero(message = "Balance amount must be greater than or equal to 0")
-    private Double fromAccountNewBalance;
+    private double fromAccountNewBalance;
 
     @PositiveOrZero(message = "Balance amount must be greater than or equal to 0")
-    private Double toAccountNewBalance;
+    private double toAccountNewBalance;
 
     @PastOrPresent(message = "TimeStamp cannot be in the future")
     private LocalDateTime timeStamp;
