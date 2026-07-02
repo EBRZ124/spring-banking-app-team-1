@@ -21,7 +21,7 @@ public class TransferRequestDto {
     private Long toAccountId;
 
     @Positive(message = "Transfer amount must be greater than 0")
-    private double amount;
+    private Double amount;
 
     @NotBlank(message = "Note cannot be blank")
     private String note;
