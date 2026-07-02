@@ -26,7 +26,7 @@ public class TransferServiceImpl implements TransferService {
 
         Account fromAccount = accountService.getAccountById(request.getFromAccountId())
                 .orElseThrow(()->new NoSuchElementException(
-                        "Account not found with id: " + request.getToAccountId()
+                        "Account not found with id: " + request.getFromAccountId()
                 ));
 
         Account toAccount = accountService.getAccountById(request.getToAccountId())
