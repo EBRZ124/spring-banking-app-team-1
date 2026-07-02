@@ -51,6 +51,9 @@ public class AccountService implements IAccountService {
 
     @Override
     public void addTransaction(long accountId, Transaction transaction) {
+        if (transaction == null) {
+            throw new IllegalArgumentException("Transaction cannot be null");
+        }
         requireAccount(accountId);
         transactionsByAccount.get(accountId).add(transaction);
     }
