@@ -22,8 +22,8 @@ jobs:
   build-and-deploy:
     runs-on: self-hosted
     env:
-      APP_CONTAINER_NAME: spring-banking-app-team-1
-      APP_IMAGE_NAME: spring-banking-app-team-1
+      APP_CONTAINER_NAME: acn-bootcamp-app
+      APP_IMAGE_NAME: acn-bootcamp-app
     
     steps:
     - name: Checkout code
