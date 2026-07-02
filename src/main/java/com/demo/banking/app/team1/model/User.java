@@ -2,10 +2,7 @@ package com.demo.banking.app.team1.model;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.concurrent.atomic.AtomicLong;
@@ -16,8 +13,8 @@ import java.util.concurrent.atomic.AtomicLong;
 public class User {
 
     private final PasswordEncoder passwordEncoder;
-
     private static final AtomicLong ID_GENERATOR = new AtomicLong(1);
+
     @Setter(AccessLevel.NONE)
     private long id;
 
