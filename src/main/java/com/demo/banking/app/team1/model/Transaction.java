@@ -1,5 +1,6 @@
 package com.demo.banking.app.team1.model;
 
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
@@ -27,11 +28,15 @@ public class Transaction {
     @NotNull
     private String note;
 
-    public Transaction(Account account, Type type, String note){
+    @Min(0)
+    private double amount;
+
+    public Transaction(Account account, Type type, String note, double amount){
         this.account = account;
         this.type = type;
         this.note = note;
         this.id = ID_GENERATOR.getAndIncrement();
         this.createdAt = LocalDateTime.now();
+        this.amount = amount;
     }
 }
