@@ -19,5 +19,4 @@ public interface IAccountService {
     Account updateBalance(long accountId, double newBalance);
 
     void addTransaction(long accountId, Transaction transaction);
-
 }
