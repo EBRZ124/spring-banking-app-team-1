@@ -1,6 +1,5 @@
 package com.demo.banking.app.team1.dto;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,7 +20,7 @@ public class CreateAccountRequestDto
     private String ownerName;
 
     @PositiveOrZero(message = "Balance cannot be negative.")
-    private Double balance;
+    private double balance;
 
 
 }
