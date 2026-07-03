@@ -56,7 +56,6 @@ public class AccountController {
     @GetMapping("/{id}")
     public AccountResponseDto getAccountById(@PathVariable @Positive long id) {
         log.debug("Received request to get account by id={}", id);
-
         return accountService.getAccountById(id)
                 .map(AccountResponseDto::from)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Account not found with id: " + id));
@@ -72,6 +71,7 @@ public class AccountController {
                     .map(TransactionResponseDto::from)
                     .toList();
         } catch (NoSuchElementException exception) {
+
             log.warn("Cannot fetch transactions, account not found: id={}", id);
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, exception.getMessage(), exception);
         }
