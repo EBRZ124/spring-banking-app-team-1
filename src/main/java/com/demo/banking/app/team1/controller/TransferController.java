@@ -21,6 +21,11 @@ public class TransferController {
 
     @PostMapping
     public ResponseEntity<TransferResponseDto> createTransfer(@Valid @RequestBody TransferRequestDto request) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(transferService.transfer(request));
+        log.info("Received transfer request: {}", request);
+
+        TransferResponseDto response = transferService.transfer(request);
+
+        log.info("Transfer completed successfully: {}", response);
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 }
