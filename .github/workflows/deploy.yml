@@ -22,8 +22,8 @@ jobs:
   build-and-deploy:
     runs-on: self-hosted
     env:
-      APP_CONTAINER_NAME: acn-bootcamp-app
-      APP_IMAGE_NAME: acn-bootcamp-app
+      APP_CONTAINER_NAME: team1-acn-bootcamp-app
+      APP_IMAGE_NAME: team1-acn-bootcamp-app
     
     steps:
     - name: Checkout code
