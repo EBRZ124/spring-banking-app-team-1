@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/transfer")
+@Slf4j
 public class TransferController {
 
     private final TransferService transferService;
